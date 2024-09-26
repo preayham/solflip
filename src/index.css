@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth !important;
+}
+
+html {
+  background-color: #0f0f11;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.enterAnimation {
+  animation: enterAnimation 750ms forwards;
+  transition: all ease-in-out;
+}
+
+@keyframes enterAnimation {
+  from {
+    scale: 0.85;
+    opacity: 50%;
+  }
+
+  to {
+    scale: 1;
+    opacity: 100%;
+  }
+}
+
+@keyframes betterLoading {
+  0% {
+    background-position: 0% 0, 0 0;
+  }
+  100% {
+    background-position: 100000%, 0 0;
+  }
+}
+
+.aref:hover .skeleton,
+.skeletonAlways {
+  height: 100%;
+  animation: betterLoading 500ms ease-in-out forwards;
+  background-image: linear-gradient(#9ca3af 100%, transparent 0),
+    linear-gradient(to top right, #9565e1 15%, #31cab8 100%);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 99% 100%, cover;
+}
+
+@keyframes imgFlip {
+  to {
+    transform: rotate3d(1, 0.75, 0, 360deg);
+  }
+}
+
+.imgAnimDiv:hover img {
+  animation: imgFlip 1s ease-in-out forwards;
+}
+
+@keyframes imgFlipConstant {
+  from {
+    transform: translate(-50%, 0px) rotate3d(0, 0, 0, 0deg);
+  }
+
+  to {
+    transform: translate(15%, 0px) rotate3d(1, 0.75, 0, 360deg);
+  }
+}
+
+.imgFlipConstant {
+  animation: imgFlipConstant 2s forwards;
+}
+
+.bgBlur {
+  z-index: 0;
+  background-image: linear-gradient(
+    83deg,
+    #30b6ff,
+    #9565e1 28%,
+    #9565e1 46%,
+    #9565e1 62%,
+    #9565e1 75%,
+    #30b6ff
+  );
+  filter: blur(325px);
+  width: 60vw;
+  max-width: none;
+  height: 50vh;
+  bottom: -20%;
+  position: absolute;
+}
+
+@keyframes loadTitle {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.loadingTitle {
+  animation: loadTitle 2s linear forwards;
+  max-width: fit-content;
+}
+
+.loadingTitle span {
+  overflow: hidden;
+}
+
+.card {
+  background-image: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
