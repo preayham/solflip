@@ -54,10 +54,10 @@ const Header = () => {
             opened ? "visible" : "max-sm:hidden"
           }`}
         >
-          <HRef value="Discord" href="https://discord.com" />
-          <HRef value="Telegram" href="https://discord.com" />
-          <HRef value="Roadmap" href="https://discord.com" />
-          <HRef value="Play game" href="https://discord.com" />
+          <HRef value="Discord" href="" />
+          <HRef value="Telegram" href="" />
+          <HRef value="Roadmap" href="" />
+          <HRef value="Play game" href="" />
         </div>
       </div>
     </div>
