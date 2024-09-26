@@ -2,7 +2,11 @@ import { useState } from "react";
 
 const HRef = ({ value, href }: { value: string; href: string }) => {
   return (
-    <a className="aref transition-all ease-linear" href={href} target="_blank">
+    <a
+      className="aref transition-all ease-linear"
+      href={href}
+      target={href ? "_blank" : ""}
+    >
       <span className="text-sm tracking-tighter bg-gradient-to-r bg-[-200px] from-gray-400 to-gray-400 text-transparent bg-clip-text skeleton">
         {value}
       </span>
