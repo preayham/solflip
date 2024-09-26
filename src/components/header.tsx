@@ -54,9 +54,7 @@ const Header = () => {
             opened ? "visible" : "max-sm:hidden"
           }`}
         >
-          <HRef value="Discord" href="" />
-          <HRef value="Telegram" href="" />
-          <HRef value="Roadmap" href="" />
+          <HRef value="Github" href="https://github.com/preayham/solflip" />
           <HRef value="Play game" href="" />
         </div>
       </div>
